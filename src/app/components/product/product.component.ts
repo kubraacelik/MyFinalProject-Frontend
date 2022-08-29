@@ -24,8 +24,5 @@ export class ProductComponent implements OnInit {
       this.products = response.data
       this.dataLoaded =  true;
     })
-    console.log();
-  }
-  
-
+  } 
 }
