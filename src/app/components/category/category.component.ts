@@ -11,7 +11,6 @@ export class CategoryComponent implements OnInit {
 
   categories:Category[]=[];
   currentCategory:Category;
-  dataLoaded=false;
   constructor(private categoryService:CategoryService) { }
 
   ngOnInit(): void {
@@ -21,7 +20,6 @@ export class CategoryComponent implements OnInit {
   getCategories(){
     this.categoryService.getCategories().subscribe(response=>{
       this.categories = response.data
-      this.dataLoaded =  true;
     })
   }
   setCurrentCategory(category:Category){
